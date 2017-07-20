@@ -1,0 +1,53 @@
+{
+    "name": "bmanwebsite",
+    "version": "1.0.0",
+    "description": "Personal website",
+    "main": "./out/app.js",
+    "scripts": {
+        "grunt": "grunt",
+        "start": "node ./out/bin/www.js",
+        "test": "mocha ./tests/out/test.js",
+        "compile": "node ./node_modules/typescript/bin/tsc -p ./src",
+        "compiletests": "node ./node_modules/typescript/bin/tsc -p ./tests"
+    },
+    "dependencies": {
+        "angular4": "^1.0.0",
+        "body-parser": "^1.17.2",
+        "bootstrap4": "^0.0.1-security",
+        "express": "^4.15.3",
+        "install": "^0.10.1",
+        "path": "^0.12.7",
+        "pug": "^2.0.0-rc.2"
+    },
+    "devDependencies": {
+        "@types/debug": "0.0.29",
+        "@types/body-parser": "^1.16.4",
+        "@types/express": "^4.0.36",
+        "@types/express-serve-static-core": "^4.0.49",
+        "@types/node": "^8.0.14",
+        "@types/serve-static": "^1.7.31",
+        "tslint": "^5.5.0",
+        "typescript": "^2.4.1",
+        "grunt": "^1.0.1",
+        "grunt-cli": "^1.2.0",
+        "grunt-contrib-watch": "^1.0.0",
+        "grunt-ts": "^6.0.0-beta.16",
+        "grunt-tslint": "^5.0.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/branc116/BmanWeb.git"
+    },
+    "keywords": [
+        "web",
+        "site",
+        "personal",
+        "blog"
+    ],
+    "author": "Branimir Ričko",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/branc116/BmanWeb/issues"
+    },
+    "homepage": "https://github.com/branc116/BmanWeb#readme"
+}
