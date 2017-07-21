@@ -1,0 +1,57 @@
+body {
+    font-family: 'Lato';
+    background-color: #E3F2FD;
+    align-content: center;
+    margin: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1f 2f 1f;
+    grid-template-rows: auto auto;
+    grid-template-areas: "head head head" "about content footer";
+    margin: 0 auto;
+    width: inherit;
+    max-width: 70vw;
+}
+
+.head {
+    grid-area: head;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url("/img/cover.svg");
+    min-height: 30vh;
+    max-height: 40vh
+}
+
+.head:hover {
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.about {
+    grid-area: about;
+    background-color: #82B1FF;
+}
+
+.content {
+    grid-area: content;
+    background-color: #E3F2FD;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #82B1FF;
+}
+
+.mySvg {
+    /* width: 200%; */
+    align-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.trans {
+    transition: 1s cubic-bezier(0, 1.85, 0.6, 1.01);
+}

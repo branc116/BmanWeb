@@ -1,4 +1,3 @@
-"use strict";
 var MultimediaObject = (function () {
     function MultimediaObject() {
     }

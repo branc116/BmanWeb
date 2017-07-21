@@ -33,19 +33,19 @@ export class Server {
         //home page
         //use router middleware
         app.use("/", index);
+        app.use((error: any) => {
+            // console.log(error);
+        });
     }
     //configure web app middleware
     private configure(app: express.Application) {
         app.set("views", path.join(__dirname, "views"));
         app.set("view engine", "pug");
+        app.use("/styles", express.static(path.join(__dirname, "style")));
+        app.use("/img", express.static(path.join(__dirname, "Data", "img")));
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({ extended: false }));
         app.use(express.static(path.join(__dirname, "public")));
-
-
-        app.use((error: any) => {
-            console.log(error);
-        });
     }
 
     /**

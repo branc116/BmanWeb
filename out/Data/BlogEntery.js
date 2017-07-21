@@ -1,4 +1,3 @@
-"use strict";
 var BlogEntery = (function () {
     function BlogEntery(tags, text, multimedia) {
         if (tags) {

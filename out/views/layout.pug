@@ -1,6 +1,26 @@
 doctype html
 html
   head
-    title= bman
+    link(href="http://fonts.googleapis.com/css?family=Tangerine", rel="stylesheet", type="text/css")
+    link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    link(rel="stylesheet" type="text/css" href="/styles/style.css")
+    title= title
   body
-    block content
+    nav(class="navbar navbar-default")
+      div(class="container-fluid")
+        ul(class="nav navbar-nav")
+          li(class="active")
+            a(href="/", title="Home").class Home
+          li
+            a(href="https://github.com/branc116", title="GitHub").class GitHub
+          li
+            a(href="/info", title="Info").class Info
+    div(class="container")
+      div(class="head trans")
+        //- img(src="/img/cover.png", class="img img-responsive", style="max-height: 20vh;", alt="cover")
+      div(class="about trans")
+        block about
+      div(class="content trans")
+        block content
+      div(class="footer trans")
+        block footer  

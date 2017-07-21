@@ -1,0 +1,47 @@
+<svg class="mySvg img-responsive" width="582" height="402" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <radialGradient gradientTransform="translate(0,0.06443965517241376) scale(1,0.9103448275862069)" r="0.703893" cy="0.71875" cx="0.285156" spreadMethod="pad" id="svg_33">
+   <stop offset="0" stop-color="#7d4e00"/>
+   <stop offset="1" stop-color="#82b1ff"/>
+  </radialGradient>
+  <radialGradient gradientTransform="rotate(46.551724137931025,0.1484375,0.484375) translate(0,0.31066810344827583) scale(1,0.35862068965517246)" r="1.716964" cy="0.484375" cx="0.148438" spreadMethod="pad" id="svg_35">
+   <stop offset="0" stop-color="#1c0d02"/>
+   <stop offset="1" stop-color="#e3f2fd"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>background</title>
+  <rect fill="url(#svg_35)" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+  <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+   <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+  </g>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect stroke="#000" rx="54" id="svg_1" height="180" width="383.999986" y="33" x="85.500009" stroke-width="16" fill="url(#svg_33)"/>
+  <rect stroke="#000" id="svg_2" height="45.000001" width="12.999999" y="218" x="264.500001" fill-opacity="null" stroke-opacity="null" stroke-width="16" fill="#fff"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_3" y2="300" x2="420" y1="300" x1="119" fill-opacity="null" stroke-opacity="null" stroke-width="8" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_4" y2="358" x2="100" y1="302" x1="120" fill-opacity="null" stroke-opacity="null" stroke-width="8" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_6" y2="355" x2="440" y1="355" x1="100" fill-opacity="null" stroke-opacity="null" stroke-width="8" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_8" y2="353" x2="123" y1="299" x1="140" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_9" y2="300" x2="160" y1="355" x1="145" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_12" y2="300" x2="180" y1="355" x1="167" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_13" y2="300" x2="200" y1="355" x1="190" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_14" y2="300" x2="220" y1="355" x1="212" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_15" y2="300" x2="240" y1="355" x1="235" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_16" y2="300" x2="260" y1="355" x1="257" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_18" y2="300" x2="280" y1="355" x1="281" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_19" y2="300" x2="300" y1="355" x1="305" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_20" y2="300" x2="320" y1="355" x1="327" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_21" y2="300" x2="340" y1="355" x1="350" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_22" y2="300" x2="360" y1="355" x1="372" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_23" y2="300" x2="380" y1="355" x1="395" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_24" y2="300" x2="400" y1="355" x1="417" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_25" y2="300" x2="420" y1="355" x1="440" fill-opacity="null" stroke-opacity="null" stroke-width="8" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_26" y2="267" x2="277.5" y1="299" x1="271.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_27" y2="335" x2="432.5" y1="335" x1="107.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" stroke="#000" fill="none"/>
+  <line stroke-linecap="null" stroke-linejoin="null" id="svg_28" y2="325" x2="432.5" y1="325" x1="107.5" fill-opacity="null" stroke-opacity="null" stroke-width="2" stroke="#000" fill="none"/>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_29" y2="317" x2="427.5" y1="317" x1="115.499992" fill-opacity="null" stroke-opacity="null" stroke-width="2" fill="none"/>
+  <line stroke="#000" stroke-linecap="null" stroke-linejoin="null" id="svg_30" y2="310" x2="423.500002" y1="310" x1="116.500003" fill-opacity="null" stroke-opacity="null" stroke-width="2" fill="none"/>
+ </g>
+</svg>

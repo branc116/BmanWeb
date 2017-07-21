@@ -4,11 +4,12 @@ var express = require("express");
 var fs = require("fs");
 var index = express.Router();
 index.get("/", function (req, res, next) {
-    //render page
     console.log("index request");
-    var me = JSON.parse(fs.readFileSync("../Data/User/me.json", "UTF-8"));
+    var meStr = fs.readFileSync("out/Data/Profile/Me.json", "UTF-8");
+    var me = JSON.parse(meStr);
     res.render("index", { title: "Bman",
-        userData: me });
+        userData: me,
+        userDataStr: meStr });
 });
 exports.default = index;
 //# sourceMappingURL=index.js.map

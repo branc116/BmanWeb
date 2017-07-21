@@ -3,12 +3,13 @@
 //module dependencies.
 import * as appNs from "../app";
 import * as debug from "debug";
-
 import * as http from "http";
 
 //get port from environment and store in Express.
 let app = appNs.Server.bootstrap().app;
-var port = 80;
+const en =  process;
+var os = process.env["OS"];
+var port = os === "Windows_NT" ? 5555 : 80;
 app.set("port", port);
 
 //create http server

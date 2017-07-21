@@ -1,19 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//module dependencies.
 var appNs = require("../app");
 var http = require("http");
-//get port from environment and store in Express.
 var app = appNs.Server.bootstrap().app;
-var port = 55556;
+var en = process;
+var os = process.env["OS"];
+var port = os === "Windows_NT" ? 5555 : 80;
 app.set("port", port);
-//create http server
 var server = http.createServer(app);
 server.on("listening", function () {
     console.log("Started listening");
 });
 server.listen(port);
-//add error handler
 server.on("error", function (error) {
     if (error.name !== "listen") {
         throw error;
@@ -21,7 +19,6 @@ server.on("error", function (error) {
     var bind = typeof port === "string" ?
         "Pipe " + port :
         "Port " + port;
-    // handle specific listen errors with friendly messages
     switch (error.message) {
         case "EACCES":
             console.error(bind + " requires elevated privileges");
@@ -35,7 +32,6 @@ server.on("error", function (error) {
             throw error;
     }
 });
-//start listening on port
 server.on("listening", function () {
     var addr = server.address();
     var bind = typeof addr === "string" ?
