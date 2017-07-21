@@ -8,7 +8,7 @@ import * as http from "http";
 
 //get port from environment and store in Express.
 let app = appNs.Server.bootstrap().app;
-var port = 55556;
+var port = 80;
 app.set("port", port);
 
 //create http server
