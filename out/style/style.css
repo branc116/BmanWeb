@@ -5,18 +5,57 @@ body {
     margin: auto;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1f 2f 1f;
-    grid-template-rows: auto auto;
-    grid-template-areas: "head head head" "about content footer";
-    margin: 0 auto;
-    width: inherit;
-    max-width: 70vw;
+@media screen and (max-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1f;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "about" "head" "content" "footer";
+        margin: 0 auto;
+        width: inherit;
+        max-width: 70vw;
+    }
+    .about {
+        grid-area: about;
+        margin: auto;
+        background-color: #E3F2FD;
+    }
+    .footer {
+        grid-area: footer;
+        background-color: #E3F2FD;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1f 2f 1f;
+        grid-template-rows: auto auto;
+        grid-template-areas: "head head head" "about content footer";
+        margin: 0 auto;
+        width: inherit;
+        max-width: 70vw;
+    }
+    .head:hover {
+        min-height: 70vh;
+        max-height: 70vh;
+    }
+    .about {
+        grid-area: about;
+        width: fit-content;
+        background-color: #E3F2FD;
+    }
+    .footer {
+        grid-area: footer;
+        background-color: #E3F2FD;
+        float: right;
+    }
 }
 
 .head {
     grid-area: head;
+    grid-gap: 3vh;
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -25,33 +64,43 @@ body {
     max-height: 40vh
 }
 
-.head:hover {
-    min-height: 100vh;
-    max-height: 100vh;
-}
-
-.about {
-    grid-area: about;
-    background-color: #82B1FF;
-}
-
 .content {
     grid-area: content;
     background-color: #E3F2FD;
 }
 
-.footer {
-    grid-area: footer;
-    background-color: #82B1FF;
+.container-about {
+    display: grid;
+    grid-template-columns: 1f;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "pic" "name" "lastname";
+    margin: 0 auto;
 }
 
-.mySvg {
-    /* width: 200%; */
-    align-content: center;
-    align-items: center;
-    align-self: center;
+.pic {
+    grid-area: pic;
+    max-width: 10vw;
+    margin: auto;
+}
+
+.name {
+    grid-area: name;
+    margin: auto;
+}
+
+.lastname {
+    grid-area: lastname;
+    margin: auto;
 }
 
 .trans {
     transition: 1s cubic-bezier(0, 1.85, 0.6, 1.01);
+}
+
+.myfooter {
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    height: 5vh;
+    bottom: 0;
 }

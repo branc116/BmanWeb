@@ -3,7 +3,7 @@ export class User {
     /**
      *
      */
-    constructor(name?: string, lastName?: string, contactInfo?: { [type: string]: string; }, image?: ImageObject) {
+    constructor(name?: string, lastName?: string, contactInfo?: {[key: string]: string}, image?: ImageObject) {
         if (contactInfo) {
             this.contactInfo = contactInfo;
         }
@@ -33,11 +33,11 @@ export class User {
         this._lastName = v;
     }
 
-    private _contactInfo : { [type: string]: string; };
-    public get contactInfo() : { [type: string]: string; } {
+    private _contactInfo : {[key: string]: string};
+    public get contactInfo() : {[key: string]: string} {
         return this._contactInfo;
     }
-    public set contactInfo(v : { [type: string]: string; }) {
+    public set contactInfo(v : {[key: string]: string}) {
         this._contactInfo = v;
     }
 

@@ -12,9 +12,8 @@
         "compiletests": "node ./node_modules/typescript/bin/tsc -p ./tests"
     },
     "dependencies": {
-        "angular4": "^1.0.0",
         "body-parser": "^1.17.2",
-        "bootstrap4": "^0.0.1-security",
+        "angular4": "^1.0.0",
         "express": "^4.15.3",
         "install": "^0.10.1",
         "path": "^0.12.7",

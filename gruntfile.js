@@ -62,6 +62,21 @@ module.exports = function(grunt) {
                     lib: [
                         "es6", "dom"
                     ],
+                    "files": [
+                        "core.ts",
+                        "sys.ts",
+                        "types.ts",
+                        "scanner.ts",
+                        "parser.ts",
+                        "utilities.ts",
+                        "binder.ts",
+                        "checker.ts",
+                        "emitter.ts",
+                        "program.ts",
+                        "commandLineParser.ts",
+                        "tsc.ts",
+                        "diagnosticInformationMap.generated.ts"
+                    ]
                 }
             },
         },
@@ -98,8 +113,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-watch");
     // Default task(s).
     grunt.registerTask('default', ["ts",
-        "tslint",
-        'uglify'
+        "tslint"
+        // ,'uglify'
     ]);
 
 };

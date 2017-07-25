@@ -7,9 +7,17 @@ index.get("/", function (req, res, next) {
     console.log("index request");
     var meStr = fs.readFileSync("out/Data/Profile/Me.json", "UTF-8");
     var me = JSON.parse(meStr);
+    var infoKeys = new Array();
+    for (var inf in me.contactInfo) {
+        if (inf) {
+            infoKeys.push(inf);
+        }
+    }
     res.render("index", { title: "Bman",
         userData: me,
-        userDataStr: meStr });
+        userDataStr: meStr,
+        userKeys: infoKeys
+    });
 });
 exports.default = index;
 //# sourceMappingURL=index.js.map

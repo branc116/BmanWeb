@@ -17,10 +17,22 @@ html
             a(href="/info", title="Info").class Info
     div(class="container")
       div(class="head trans")
-        //- img(src="/img/cover.png", class="img img-responsive", style="max-height: 20vh;", alt="cover")
       div(class="about trans")
-        block about
+        div(class="container-about")
+          div(class="pic")
+            img(class="img-rounded pic" src= userData.image.uri alt="")
+          div(class="name")
+            p= userData.name
+          div(class="lastname")
+            p= userData.lastName
       div(class="content trans")
         block content
       div(class="footer trans")
-        block footer  
+        ul(class="list-group links")
+          each val in userKeys
+            if val
+              li(class="list-group-item")
+                a(class="btn btn-info btn-big glyphicon", href= userData.contactInfo[val] title= userData.contactInfo[val]).class= val
+  footer(class="footer myfooter")
+      div(class="container")
+        p(class="text mutted") Branimir Ričko © Apache License Version 2.0
