@@ -1,4 +1,4 @@
-class BlogEntery {
+export class BlogEntery {
     constructor(tags?: string[], text?: string, multimedia?: MultimediaObject[]) {
         if (tags) {
             this.tags = tags;

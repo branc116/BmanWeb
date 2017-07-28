@@ -1,0 +1,15 @@
+{
+    "createdDate": "1500984217735",
+    "tags": [
+        "test",
+        "first post",
+        "it will work"
+    ],
+    "text": "I'm creating my own blog engine and this is a test to see how well it'll preforme",
+    "multimedia": [{
+        "id": 1,
+        "uri": "img/TaxyDriver.png",
+        "title": "Taxi driver",
+        "type": "Image"
+    }]
+}

@@ -13,9 +13,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ImageObject = (function (_super) {
     __extends(ImageObject, _super);
     function ImageObject() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.type = "Image";
-        return _this;
+        return _super !== null && _super.apply(this, arguments) || this;
     }
     return ImageObject;
 }(MultimediaObject));

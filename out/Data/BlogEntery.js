@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var BlogEntery = (function () {
     function BlogEntery(tags, text, multimedia) {
         if (tags) {
@@ -52,4 +54,5 @@ var BlogEntery = (function () {
     });
     return BlogEntery;
 }());
+exports.BlogEntery = BlogEntery;
 //# sourceMappingURL=BlogEntery.js.map

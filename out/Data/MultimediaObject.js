@@ -21,6 +21,16 @@ var MultimediaObject = (function () {
         enumerable: true,
         configurable: true
     });
+    Object.defineProperty(MultimediaObject.prototype, "title", {
+        get: function () {
+            return this._title;
+        },
+        set: function (v) {
+            this._title = v;
+        },
+        enumerable: true,
+        configurable: true
+    });
     return MultimediaObject;
 }());
 //# sourceMappingURL=MultimediaObject.js.map

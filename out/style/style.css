@@ -9,18 +9,17 @@ body {
     .container {
         display: grid;
         grid-template-columns: 1f;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "about" "head" "content" "footer";
-        margin: 0 auto;
+        grid-template-rows: auto auto auto auto 5vh;
+        grid-template-areas: "about" "head" "content" "footer" "license";
         width: inherit;
-        max-width: 70vw;
+        max-width: 90vw;
     }
     .about {
         grid-area: about;
         margin: auto;
         background-color: #E3F2FD;
     }
-    .footer {
+    .footer-my {
         grid-area: footer;
         background-color: #E3F2FD;
         margin: auto;
@@ -31,11 +30,12 @@ body {
     .container {
         display: grid;
         grid-template-columns: 1f 2f 1f;
-        grid-template-rows: auto auto;
-        grid-template-areas: "head head head" "about content footer";
+        grid-template-rows: auto auto 5vh;
+        grid-template-areas: "head head head" "about content footer" "license license license";
         margin: 0 auto;
         width: inherit;
-        max-width: 70vw;
+        max-width: 80vw;
+        height: inherit;
     }
     .head:hover {
         min-height: 70vh;
@@ -46,7 +46,7 @@ body {
         width: fit-content;
         background-color: #E3F2FD;
     }
-    .footer {
+    .footer-my {
         grid-area: footer;
         background-color: #E3F2FD;
         float: right;
@@ -60,13 +60,15 @@ body {
     background-size: cover;
     background-position: center;
     background-image: url("/img/cover.svg");
-    min-height: 30vh;
-    max-height: 40vh
+    min-height: 20vh;
+    max-height: 40vh;
+    border-radius: 9%;
 }
 
 .content {
     grid-area: content;
     background-color: #E3F2FD;
+    margin: auto;
 }
 
 .container-about {
@@ -98,9 +100,7 @@ body {
 }
 
 .myfooter {
-    position: absolute;
+    grid-area: license;
     margin: auto;
     width: 100vw;
-    height: 5vh;
-    bottom: 0;
 }

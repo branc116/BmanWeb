@@ -14,7 +14,12 @@ abstract class MultimediaObject {
     public set uri(v : URL) {
         this._uri = v;
     }
-
-    public abstract type : string;
-
+    private _title : string;
+    public get title() : string {
+        return this._title;
+    }
+    public set title(v : string) {
+        this._title = v;
+    }
+    abstract type : "Image" | "Video" | "Word" | "Music";
 }

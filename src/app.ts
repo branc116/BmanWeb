@@ -43,6 +43,7 @@ export class Server {
         app.set("view engine", "pug");
         app.use("/styles", express.static(path.join(__dirname, "style")));
         app.use("/img", express.static(path.join(__dirname, "Data", "img")));
+        app.use("/posts", express.static(path.join(__dirname, "Data", "BlogPosts")));
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({ extended: false }));
         app.use(express.static(path.join(__dirname, "public")));

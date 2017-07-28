@@ -34,38 +34,47 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var express = require("express");
-var findBlogPosts_1 = require("../libs/findBlogPosts");
-var findProfile_1 = require("../libs/findProfile");
-var index = express.Router();
-index.get("/", function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
-    var prof, posts, usr, usrStr, keys;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4, new findProfile_1.Profile().getProfile("out/Data/Profile/Me.json")];
-            case 1:
-                prof = _a.sent();
-                if (!(prof instanceof Array)) {
-                    throw "Can't get profile: " + prof;
+var BlogEntery_1 = require("../Data/BlogEntery");
+var fsAsync_1 = require("../libs/fsAsync");
+var Posts = (function () {
+    function Posts() {
+    }
+    Posts.prototype.getAllPosts = function (path) {
+        return __awaiter(this, void 0, void 0, function () {
+            var allPosts, fs, files, filePromises, file, task;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        allPosts = [];
+                        fs = new fsAsync_1.FsAsync();
+                        return [4, fs.readdirAsync(path)];
+                    case 1:
+                        files = _a.sent();
+                        filePromises = [];
+                        if (!(files instanceof Array)) {
+                            return [2, files];
+                        }
+                        for (file in files) {
+                            if (file) {
+                                task = fs.readFileAsync(path + files[file])
+                                    .then(this.stringToBlogEntery);
+                                filePromises.push(task);
+                            }
+                        }
+                        return [4, Promise.all(filePromises)];
+                    case 2: return [2, _a.sent()];
                 }
-                return [4, new findBlogPosts_1.Posts().getAllPosts("./out/Data/BlogPosts/")];
-            case 2:
-                posts = _a.sent();
-                if (!(posts instanceof Array)) {
-                    throw "Can't get posts: " + posts;
-                }
-                usr = prof[0], usrStr = prof[1], keys = prof[2];
-                res.render("index", { title: "Bman",
-                    userData: usr,
-                    userDataStr: usrStr,
-                    userKeys: keys,
-                    posts: posts
-                });
-                return [2];
+            });
+        });
+    };
+    Posts.prototype.stringToBlogEntery = function (value) {
+        if ((typeof value === "string")) {
+            return JSON.parse(value);
         }
-    });
-}); });
-exports.default = index;
-//# sourceMappingURL=index.js.map
+        return new BlogEntery_1.BlogEntery();
+    };
+    return Posts;
+}());
+exports.Posts = Posts;
+//# sourceMappingURL=findBlogPosts.js.map

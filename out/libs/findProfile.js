@@ -34,38 +34,37 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
-var _this = this;
 Object.defineProperty(exports, "__esModule", { value: true });
-var express = require("express");
-var findBlogPosts_1 = require("../libs/findBlogPosts");
-var findProfile_1 = require("../libs/findProfile");
-var index = express.Router();
-index.get("/", function (req, res, next) { return __awaiter(_this, void 0, void 0, function () {
-    var prof, posts, usr, usrStr, keys;
-    return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0: return [4, new findProfile_1.Profile().getProfile("out/Data/Profile/Me.json")];
-            case 1:
-                prof = _a.sent();
-                if (!(prof instanceof Array)) {
-                    throw "Can't get profile: " + prof;
+var fsAsync_1 = require("../libs/fsAsync");
+var Profile = (function () {
+    function Profile() {
+    }
+    Profile.prototype.getProfile = function (path) {
+        return __awaiter(this, void 0, void 0, function () {
+            var fs, meStr, me, infoKeys, inf;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0:
+                        fs = new fsAsync_1.FsAsync();
+                        return [4, fs.readFileAsync(path)];
+                    case 1:
+                        meStr = _a.sent();
+                        if (!(typeof meStr === "string")) {
+                            return [2, meStr];
+                        }
+                        me = JSON.parse(meStr);
+                        infoKeys = new Array();
+                        for (inf in me.contactInfo) {
+                            if (inf) {
+                                infoKeys.push(inf);
+                            }
+                        }
+                        return [2, [me, meStr, infoKeys]];
                 }
-                return [4, new findBlogPosts_1.Posts().getAllPosts("./out/Data/BlogPosts/")];
-            case 2:
-                posts = _a.sent();
-                if (!(posts instanceof Array)) {
-                    throw "Can't get posts: " + posts;
-                }
-                usr = prof[0], usrStr = prof[1], keys = prof[2];
-                res.render("index", { title: "Bman",
-                    userData: usr,
-                    userDataStr: usrStr,
-                    userKeys: keys,
-                    posts: posts
-                });
-                return [2];
-        }
-    });
-}); });
-exports.default = index;
-//# sourceMappingURL=index.js.map
+            });
+        });
+    };
+    return Profile;
+}());
+exports.Profile = Profile;
+//# sourceMappingURL=findProfile.js.map

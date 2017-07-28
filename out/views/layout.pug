@@ -27,12 +27,11 @@ html
             p= userData.lastName
       div(class="content trans")
         block content
-      div(class="footer trans")
+      div(class="footer-my trans")
         ul(class="list-group links")
           each val in userKeys
             if val
               li(class="list-group-item")
                 a(class="btn btn-info btn-big glyphicon", href= userData.contactInfo[val] title= userData.contactInfo[val]).class= val
-  footer(class="footer myfooter")
-      div(class="container")
+      div(class="license")
         p(class="text mutted") Branimir Ričko © Apache License Version 2.0

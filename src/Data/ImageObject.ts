@@ -1,3 +1,3 @@
 export class ImageObject extends MultimediaObject {
-    public type = "Image";
+    public type : "Image";
 }
